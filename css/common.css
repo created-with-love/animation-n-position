@@ -71,7 +71,8 @@ ul {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* иконки контактов (письмо и телефон) */
@@ -87,6 +88,7 @@ ul {
 .contacts .contacts-link:hover,
 .contacts .contacts-link:focus {
   color: var(--accent-color);
+  font-size: 16px;
 }
 
 .link {
@@ -94,12 +96,21 @@ ul {
 }
 
 .header-nav {
+  position: fixed;
   display: flex;
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  top: 0;
+
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #ffffffd8;
+}
+
+body {
+  padding-top: 80px;
 }
 
 .contacts-link {

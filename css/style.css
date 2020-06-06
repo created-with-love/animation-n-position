@@ -277,6 +277,14 @@ ul {
 
 .team-section-box__item {
   background-color: #fff;
+  transition: transform 1000ms linear, scale 1000ms ease,
+    box-shadow 800ms ease-out;
+}
+
+.team-section-box__item:hover,
+.team-section-box__item:focus {
+  transform: scale(1.09) skew(-1deg, 1deg);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
 }
 
 .social-links-box {
@@ -352,14 +360,16 @@ ul {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms ease;
+  transform: scale(1);
 }
 .clients-box .client-box-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-box > .client-box-item:hover {
+.client-box-item:hover {
   border: 1px solid var(--accent-color);
+  transform: scale(1.1);
 }
 
 /* Коробочки для логотипов наших клиентов */
