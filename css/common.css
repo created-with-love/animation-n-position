@@ -290,6 +290,7 @@ body {
   justify-content: center;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulsing 2s infinite;
 }
 
 .social-link:hover,
@@ -356,6 +357,8 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation: trembling 2s infinite;
 }
 
 .footer-button:hover,
@@ -393,4 +396,43 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ANIMATIONS */
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+}
+@keyframes trembling {
+  0% {
+    -webkit-transform: skew(1, 1);
+    transform: skew(1, 1);
+  }
+  25% {
+    -webkit-transform: skew(-2deg, 2deg) scale(1.03, 1.03);
+    transform: skew(-2deg, 2deg) scale(1.03, 1.03);
+  }
+  50% {
+    -webkit-transform: skew(1, 1);
+    transform: skew(1, 1);
+  }
+  75% {
+    -webkit-transform: skew(2deg, -2deg) scale(1.05, 1.05);
+    transform: skew(2deg, -2deg) scale(1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: skew(1, 1);
+    transform: skew(1, 1);
+  }
 }

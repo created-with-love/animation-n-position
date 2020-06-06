@@ -83,6 +83,8 @@ ul {
     background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     baxo-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation: pulsing 2s infinite;
 }
 
 .hero-button:hover,
